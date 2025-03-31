@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Registro de Usuário</h1>
+    
+    <!-- Formulário de registro -->
+    <form action="#" method="post">
+        <!-- Campo para nome completo -->
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+        
+        <!-- Campo para email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        
+        <!-- Grupo de opções para sexo -->
+        <div class="radio-group">
+            <label>Sexo:</label><br>
+            <input type="radio" id="masculino" name="sexo" value="masculino" checked>
+            <label for="masculino">Masculino</label>
+            
+            <input type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="feminino">Feminino</label>
+            
+            <input type="radio" id="outro" name="sexo" value="outro">
+            <label for="outro">Outro</label>
+        </div>
+        
+        <!-- Campo para data de nascimento -->
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+        
+        <!-- Campo para seleção de país -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="" disabled selected>Selecione seu país</option>
+            <option value="brasil">Brasil</option>
+            <option value="portugal">Portugal</option>
+            <option value="angola">Angola</option>
+            <option value="mocambique">Moçambique</option>
+            <option value="outro">Outro</option>
+        </select>
+        
+        <!-- Checkbox para termos e condições -->
+        <div class="checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Aceito os termos e condições</label>
+        </div>
+        
+        <!-- Botão de envio -->
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <a href="index.html" class="back-link">Voltar para a página principal</a>
+</body>
+</html>
